@@ -145,11 +145,6 @@ h2{font-size:34px}
 </div>
 </footer>
 </div>
-<script>(function(){var r=document.documentElement,k="hn-theme-hub";
-function set(t){if(t==="light"){r.setAttribute("data-theme","light");}else{r.removeAttribute("data-theme");t="dark";}
-document.querySelectorAll(".tm").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-t")===t));});
-try{localStorage.setItem(k,t);}catch(e){}}
-var v=null;try{v=localStorage.getItem(k);}catch(e){}set(v==="light"?"light":"dark");
-document.querySelectorAll(".tm").forEach(function(b){b.addEventListener("click",function(){set(b.getAttribute("data-t"));});});})();</script>
+<script>(function(){var r=document.documentElement,K="hn-mode";var btns=document.querySelectorAll("button.tm[data-t]");function set(t,save){if(t==="light"){r.setAttribute("data-theme","light");}else{r.removeAttribute("data-theme");t="dark";}btns.forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-t")===t));});if(save){try{localStorage.setItem(K,t);}catch(e){}}}function load(){var v=null;try{v=localStorage.getItem(K);}catch(e){}set(v==="light"?"light":"dark",false);}load();window.addEventListener("pageshow",load);btns.forEach(function(b){b.addEventListener("click",function(){set(b.getAttribute("data-t"),true);});});})();</script>
 </body>
 </html>
