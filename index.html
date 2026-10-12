@@ -82,7 +82,7 @@ h2{font-size:34px}
 <div class="slugs">
 <div><span style="font-weight: 600">travelers-guide ................ 00.00_00</span><span>welcome center ................ 5 guides</span></div>
 <div class="tm-line"><span>mode ...................... <button type="button" class="tm" data-t="light" aria-pressed="false">light</button>/<button type="button" class="tm" data-t="dark" aria-pressed="false">dark</button></span></div>
-<div class="r"><span>conceived by ............. <a href="https://linktr.ee/mellotom" target="_blank" rel="noopener" style="text-underline-offset: 2px">mellotom</a></span><span>rev ......................... 2026.10</span></div>
+<div class="r"><span>conceived by ............. <a href="https://linktr.ee/mellotom" target="_blank" rel="noopener" style="text-underline-offset: 2px">mellotom</a></span><span>rev ......................... 2026.10</span><span class="gc" data-path="TOTAL" data-l="37" style="visibility: hidden">visitors</span></div>
 </div>
 <header class="hero">
 <div>
@@ -172,5 +172,7 @@ h2{font-size:34px}
 </footer>
 </div>
 <script>(function(){var r=document.documentElement,K="hn-mode";var btns=document.querySelectorAll("button.tm[data-t]");function set(t,save){if(t==="light"){r.setAttribute("data-theme","light");}else{r.removeAttribute("data-theme");t="dark";}btns.forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-t")===t));});if(save){try{localStorage.setItem(K,t);}catch(e){}}}function load(){var v=null;try{v=localStorage.getItem(K);}catch(e){}set(v==="light"?"light":"dark",false);}load();window.addEventListener("pageshow",load);btns.forEach(function(b){b.addEventListener("click",function(){set(b.getAttribute("data-t"),true);});});})();</script>
+<script data-goatcounter="https://mellotom.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>(function(){var e=document.querySelector('.gc');if(!e||!window.fetch)return;var p=e.getAttribute('data-path')||location.pathname,L=+e.getAttribute('data-l')||40;fetch('https://mellotom.goatcounter.com/counter/'+encodeURIComponent(p)+'.json').then(function(r){return r.ok?r.json():null}).then(function(j){if(!j||j.count==null)return;var n=String(j.count).trim();e.textContent='visitors '+new Array(Math.max(3,L-9-n.length)).join('.')+' '+n;e.style.visibility='visible';}).catch(function(){});})();</script>
 </body>
 </html>
