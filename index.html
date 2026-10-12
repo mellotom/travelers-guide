@@ -27,6 +27,13 @@ h1{margin:0;font-weight:900;font-size:clamp(64px,8.4vw,150px);line-height:.8;let
 .key b{color:var(--pi);font-weight:700}
 .key span,.key b{display:block}
 .lanes{display:flex;flex-direction:column;gap:3px;margin:18px -64px 0}
+.filt{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding:10px 0 2px;font-family:'Roboto Mono',monospace;font-size:11.5px;color:var(--pm)}
+.fl{color:var(--pi);font-weight:600}
+.fb{font:inherit;color:var(--pi2);background:none;border:0;padding:4px 2px;margin:0;cursor:pointer;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;min-height:32px}
+.fb[aria-pressed="true"]{color:var(--pa);font-weight:700;text-decoration:none}
+.fb:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.fc{margin-left:auto}
+.card[hidden]{display:none!important}
 .strip{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:8px 0;border-bottom:1px solid var(--pi);font-family:'Roboto Mono',monospace;font-size:11px;color:var(--pm)}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding-top:22px}
 .card{background:var(--bg);color:var(--ink);border:2px solid var(--acc);display:flex;flex-direction:column;min-width:0;container-type:inline-size}
@@ -92,10 +99,11 @@ h2{font-size:34px}
 </div>
 <p class="key"><span>one-page navigators for machines with hidden depths</span><b>every button combo, menu and mode</b><span>mobile friendly with pdf &amp; print</span></p>
 </header>
-<div class="lanes" aria-hidden="true"><div style="height: 3px; background: #E30B18"></div><div style="height: 3px; background: #0F71B7"></div><div style="height: 3px; background: #F3920A"></div><div style="height: 3px; background: #F4E7C5"></div><div style="height: 3px; background: #D7BB7D"></div><div style="height: 3px; background: #5188CF"></div><div style="height: 3px; background: #6CC62F"></div><div style="height: 3px; background: #D070BF"></div><div style="height: 3px; background: #70C057"></div><div style="height: 3px; background: #FFDE16"></div><div style="height: 3px; background: #B668AA"></div><div style="height: 3px; background: #F2B15E"></div><div style="height: 3px; background: #E8912D"></div><div style="height: 3px; background: #B8661A"></div><div style="height: 3px; background: #5A5A5A"></div></div>
+<div class="lanes" aria-hidden="true"><div style="height: 3px; background: #F2B15E"></div><div style="height: 3px; background: #E8912D"></div><div style="height: 3px; background: #B8661A"></div><div style="height: 3px; background: #7A4A1C"></div><div style="height: 3px; background: #5A5A60"></div></div>
 <div class="strip"><span>five machines · five guides</span><span>pick a panel or press navigate</span><span>more destinations soon</span></div>
+<div class="filt" role="group" aria-label="filter by manufacturer"><span class="fl">manufacturer ›</span><button type="button" class="fb" data-m="" aria-pressed="true">all</button><button type="button" class="fb" data-m="expert sleepers" aria-pressed="false">expert sleepers</button><button type="button" class="fb" data-m="instruo" aria-pressed="false">instruo</button><button type="button" class="fb" data-m="intellijel" aria-pressed="false">intellijel</button><button type="button" class="fb" data-m="make noise" aria-pressed="false">make noise</button><button type="button" class="fb" data-m="squarp instruments" aria-pressed="false">squarp instruments</button><span class="fc" aria-live="polite"></span></div>
 <main class="grid">
-<article class="card k-disting">
+<article class="card k-disting" data-maker="expert sleepers">
 <div class="stripes" aria-hidden="true"><div style="height: 4px; background: #F2B15E"></div><div style="height: 4px; background: #E8912D"></div><div style="height: 4px; background: #B8661A"></div><div style="height: 4px; background: #7A4A1C"></div><div style="height: 4px; background: #5A5A60"></div></div>
 <div class="cin">
 <div class="slug"><span>disting-ex-navigator</span><span class="dots" aria-hidden="true"></span><span>01 / 05</span></div>
@@ -108,7 +116,7 @@ h2{font-size:34px}
 <a class="go" href="https://mellotom.github.io/disting-ex-navigator/"><span>navigate</span> <span class="br">[ parallel worlds ]</span><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true"><path d="M1 7 H19 M13 1.5 L19.5 7 L13 12.5" fill="none" stroke="currentColor" stroke-width="1.8"></path></svg></a>
 <div class="sub"><a href="https://mellotom.github.io/disting-ex-navigator/disting-ex-navigator.pdf" target="_blank" rel="noopener">pdf</a><span>·</span><span>light / dark inside</span><span>·</span><span>phone friendly</span></div>
 </div>
-</article><article class="card k-hermod">
+</article><article class="card k-hermod" data-maker="squarp instruments">
 <div class="stripes" aria-hidden="true"><div style="height: 4px; background: #FBC678"></div><div style="height: 4px; background: #F3920A"></div><div style="height: 4px; background: #DA5B9C"></div><div style="height: 4px; background: #BA2E82"></div><div style="height: 4px; background: #1AA19A"></div></div>
 <div class="cin">
 <div class="slug"><span>hermod-navigator</span><span class="dots" aria-hidden="true"></span><span>02 / 05</span></div>
@@ -121,7 +129,7 @@ h2{font-size:34px}
 <a class="go" href="https://mellotom.github.io/hermod-navigator/"><span>navigate</span> <span class="br">[ talking to machines ]</span><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true"><path d="M1 7 H19 M13 1.5 L19.5 7 L13 12.5" fill="none" stroke="currentColor" stroke-width="1.8"></path></svg></a>
 <div class="sub"><a href="https://mellotom.github.io/hermod-navigator/hermod-navigator.pdf" target="_blank" rel="noopener">pdf</a><span>·</span><span>light / dark inside</span><span>·</span><span>phone friendly</span></div>
 </div>
-</article><article class="card k-lubadh">
+</article><article class="card k-lubadh" data-maker="instruo">
 <div class="stripes" aria-hidden="true"><div style="height: 4px; background: #F4E7C5"></div><div style="height: 4px; background: #ECD9A9"></div><div style="height: 4px; background: #E3CB91"></div><div style="height: 4px; background: #D7BB7D"></div><div style="height: 4px; background: #CCAB68"></div></div>
 <div class="cin">
 <div class="slug"><span>lubadh-navigator</span><span class="dots" aria-hidden="true"></span><span>03 / 05</span></div>
@@ -134,7 +142,7 @@ h2{font-size:34px}
 <a class="go" href="https://mellotom.github.io/lubadh-navigator/"><span>navigate</span> <span class="br">[ time loops ]</span><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true"><path d="M1 7 H19 M13 1.5 L19.5 7 L13 12.5" fill="none" stroke="currentColor" stroke-width="1.8"></path></svg></a>
 <div class="sub"><a href="https://mellotom.github.io/lubadh-navigator/lubadh-navigator.pdf" target="_blank" rel="noopener">pdf</a><span>·</span><span>light / dark inside</span><span>·</span><span>phone friendly</span></div>
 </div>
-</article><article class="card k-morphagene">
+</article><article class="card k-morphagene" data-maker="make noise">
 <div class="stripes" aria-hidden="true"><div style="height: 4px; background: #5188CF"></div><div style="height: 4px; background: #70CB75"></div><div style="height: 4px; background: #6CC62F"></div><div style="height: 4px; background: #EAB421"></div><div style="height: 4px; background: #EF8B28"></div></div>
 <div class="cin">
 <div class="slug"><span>morphagene-navigator</span><span class="dots" aria-hidden="true"></span><span>04 / 05</span></div>
@@ -147,7 +155,7 @@ h2{font-size:34px}
 <a class="go" href="https://mellotom.github.io/morphagene-navigator/"><span>navigate</span> <span class="br">[ wormholes ]</span><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true"><path d="M1 7 H19 M13 1.5 L19.5 7 L13 12.5" fill="none" stroke="currentColor" stroke-width="1.8"></path></svg></a>
 <div class="sub"><a href="https://mellotom.github.io/morphagene-navigator/morphagene-navigator.pdf" target="_blank" rel="noopener">pdf</a><span>·</span><span>light / dark inside</span><span>·</span><span>phone friendly</span></div>
 </div>
-</article><article class="card k-multigrain">
+</article><article class="card k-multigrain" data-maker="intellijel">
 <div class="stripes" aria-hidden="true"><div style="height: 4px; background: #70C057"></div><div style="height: 4px; background: #FFDE16"></div><div style="height: 4px; background: #FCAF17"></div><div style="height: 4px; background: #ED2B43"></div><div style="height: 4px; background: #00AEEF"></div></div>
 <div class="cin">
 <div class="slug"><span>multigrain-navigator</span><span class="dots" aria-hidden="true"></span><span>05 / 05</span></div>
@@ -172,6 +180,8 @@ h2{font-size:34px}
 </footer>
 </div>
 <script>(function(){var r=document.documentElement,K="hn-mode";var btns=document.querySelectorAll("button.tm[data-t]");function set(t,save){if(t==="light"){r.setAttribute("data-theme","light");}else{r.removeAttribute("data-theme");t="dark";}btns.forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-t")===t));});if(save){try{localStorage.setItem(K,t);}catch(e){}}}function load(){var v=null;try{v=localStorage.getItem(K);}catch(e){}set(v==="light"?"light":"dark",false);}load();window.addEventListener("pageshow",load);btns.forEach(function(b){b.addEventListener("click",function(){set(b.getAttribute("data-t"),true);});});})();</script>
+<script>(function(){var S=[["#F2B15E", "#E8912D", "#B8661A", "#7A4A1C", "#5A5A60"], ["#FBC678", "#F3920A", "#DA5B9C", "#BA2E82", "#1AA19A", "#14A7CA", "#0F71B7", "#E30B18"], ["#F4E7C5", "#ECD9A9", "#E3CB91", "#D7BB7D", "#CCAB68", "#C09B55", "#B38B45", "#A27B3A"], ["#5188CF", "#70CB75", "#6CC62F", "#EAB421", "#EF8B28", "#EB173B", "#D070BF", "#FFFFFF"], ["#70C057", "#FFDE16", "#FCAF17", "#ED2B43", "#00AEEF", "#B668AA"]],l=document.querySelector(".lanes");if(!l)return;var s=S[Math.floor(Math.random()*S.length)];l.innerHTML=s.map(function(c){return '<div style="height: 3px; background: '+c+'"></div>'}).join("");})();</script>
+<script>(function(){var bs=[].slice.call(document.querySelectorAll(".fb")),cs=[].slice.call(document.querySelectorAll(".card")),fc=document.querySelector(".fc");function go(m){var n=0;cs.forEach(function(c){var on=!m||c.getAttribute("data-maker")===m;c.hidden=!on;if(on)n++;});bs.forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-m")===m));});fc.textContent=m?("showing "+n+" of "+cs.length):"";}bs.forEach(function(b){b.addEventListener("click",function(){go(b.getAttribute("data-m"));});});})();</script>
 <script data-goatcounter="https://mellotom.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>(function(){var e=document.querySelector('.gc');if(!e||!window.fetch)return;var p=e.getAttribute('data-path')||location.pathname,L=+e.getAttribute('data-l')||40;fetch('https://mellotom.goatcounter.com/counter/'+encodeURIComponent(p)+'.json').then(function(r){return r.ok?r.json():null}).then(function(j){if(!j||j.count==null)return;var n=String(j.count).trim();e.textContent='visitors '+new Array(Math.max(3,L-9-n.length)).join('.')+' '+n;e.style.visibility='visible';}).catch(function(){});})();</script>
 </body>
