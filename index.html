@@ -24,6 +24,14 @@ h1{margin:0;font-weight:900;font-size:clamp(64px,8.4vw,150px);line-height:.8;let
 .sub2 .acc{color:var(--pa)}
 .bar{height:14px;background:var(--pi);margin-top:14px}
 .key{font-family:'Roboto Mono',monospace;font-size:11px;line-height:1.6;color:var(--pi2);max-width:420px;text-align:right}
+.side{align-self:stretch;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;gap:18px}
+.latest{width:340px;font-family:'Roboto Mono',monospace;font-size:11px;line-height:1.6;color:var(--pi2)}
+.latest .lh{display:flex;justify-content:space-between;border-bottom:1px solid var(--pi);padding-bottom:3px;margin-bottom:4px;color:var(--pi);font-weight:700}
+.latest .lh span:last-child{font-weight:400;color:var(--pm)}
+.latest a{display:flex;gap:8px;color:var(--pi2);text-decoration:none}
+.latest a .dots{flex:1;border-bottom:1px dotted currentColor;opacity:.6;transform:translateY(-4px)}
+.latest a .nm{color:var(--pi)}
+.latest a:hover .nm{color:var(--pa);text-decoration:underline;text-underline-offset:2px}
 .key b{color:var(--pi);font-weight:700}
 .key span,.key b{display:block}
 .lanes{display:flex;flex-direction:column;gap:3px;margin:18px -64px 0}
@@ -72,6 +80,8 @@ h2{margin:0;font-weight:900;font-size:clamp(26px,8.2cqi,40px);line-height:1;lett
 .crop{display:none}
 .slugs{flex-direction:column;gap:8px}.slugs .r{text-align:left}
 .hero{grid-template-columns:minmax(0,1fr);gap:16px}
+.latest{display:none}
+.side{align-items:flex-start}
 .key{text-align:left}
 .lanes{margin:16px -16px 0}
 .grid{grid-template-columns:minmax(0,1fr)}
@@ -96,7 +106,7 @@ h2{font-size:34px}
 <div class="sub2"><span>_welcome center</span><span class="acc">_choose a destination</span></div></div>
 <div class="bar"></div>
 </div>
-<p class="key"><span>one-page navigators for machines with hidden depths</span><b>every button combo, menu and mode</b><span>mobile friendly with pdf &amp; print</span></p>
+<div class="side"><nav class="latest" aria-label="latest additions"><div class="lh"><span>latest additions</span><span>newest first</span></div><a href="https://mellotom.github.io/starlab-navigator/"><span class="nm">starlab</span><span class="dots" aria-hidden="true"></span><span>strymon</span></a><a href="https://mellotom.github.io/magneto-navigator/"><span class="nm">magneto</span><span class="dots" aria-hidden="true"></span><span>strymon</span></a><a href="https://mellotom.github.io/tides-v1-navigator/"><span class="nm">tides v1</span><span class="dots" aria-hidden="true"></span><span>mutable instruments</span></a><a href="https://mellotom.github.io/morphagene-mods-navigator/"><span class="nm">morphagene mods</span><span class="dots" aria-hidden="true"></span><span>make noise</span></a><a href="https://mellotom.github.io/mini-elements-navigator/"><span class="nm">mini elements</span><span class="dots" aria-hidden="true"></span><span>mutable instruments</span></a><a href="https://mellotom.github.io/versio-navigator/"><span class="nm">versio</span><span class="dots" aria-hidden="true"></span><span>noise engineering</span></a><a href="https://mellotom.github.io/rings-navigator/"><span class="nm">rings</span><span class="dots" aria-hidden="true"></span><span>mutable instruments</span></a></nav><p class="key"><span>one-page navigators for machines with hidden depths</span><b>every button combo, menu and mode</b><span>mobile friendly with pdf &amp; print</span></p></div>
 </header>
 <div class="lanes" aria-hidden="true"><div style="height: 3px; background: #009E9A"></div><div style="height: 3px; background: #7FCDCA"></div><div style="height: 3px; background: #E7A534"></div><div style="height: 3px; background: #D64779"></div><div style="height: 3px; background: #EDADC4"></div><div style="height: 3px; background: #DCE68C"></div><div style="height: 3px; background: #6B6F73"></div><div style="height: 3px; background: #101213"></div></div>
 <div class="strip"><span>twelve machines · 14 guides</span><span>pick a panel or press navigate</span><span>more destinations soon</span></div>
