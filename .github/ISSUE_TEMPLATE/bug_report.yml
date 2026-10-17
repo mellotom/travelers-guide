@@ -1,0 +1,73 @@
+name: bug report
+description: something wrong, unclear or broken on one of the guides
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: thanks for helping keep the guides accurate. please don't include any personal information.
+  - type: dropdown
+    id: guide
+    attributes:
+      label: which guide?
+      options:
+        - welcome center
+        - arbhar
+        - aurora
+        - beads
+        - disting ex
+        - hermod+
+        - lúbadh
+        - magneto
+        - maths
+        - mini elements
+        - morphagene
+        - morphagene mods
+        - multigrain
+        - plaits
+        - rings
+        - starlab
+        - tides v1
+        - tides v2
+        - versio
+        - other / more than one
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: what's wrong?
+      description: the section or figure number helps (e.g. "section 04" or "fig.02"), plus what it says and what it should say
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: source
+      description: optional · a manual page, firmware version or link that shows the right answer
+  - type: dropdown
+    id: device
+    attributes:
+      label: where did you see it?
+      options:
+        - desktop
+        - phone / tablet
+        - printed / pdf
+  - type: dropdown
+    id: theme
+    attributes:
+      label: theme
+      options:
+        - light
+        - dark
+        - a special mode (comic, night-sky)
+  - type: input
+    id: browser
+    attributes:
+      label: browser
+      description: optional · e.g. safari on iphone, chrome on windows
+  - type: textarea
+    id: shot
+    attributes:
+      label: screenshot
+      description: optional · drag an image in here

@@ -1,0 +1,42 @@
+name: guide request
+description: suggest a module for a new travelers guide
+title: "[guide request] "
+labels: ["guide request"]
+body:
+  - type: markdown
+    attributes:
+      value: requests are welcome, though there's no promise of when (or if) a guide gets made. please don't include any personal information.
+  - type: input
+    id: module
+    attributes:
+      label: module
+      placeholder: e.g. marbles
+    validations:
+      required: true
+  - type: input
+    id: maker
+    attributes:
+      label: maker
+      placeholder: e.g. mutable instruments
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: firmware / version
+      description: optional · alternate firmwares get their own guide
+  - type: input
+    id: manual
+    attributes:
+      label: link to the official manual
+      description: guides are built from the official documentation
+  - type: textarea
+    id: why
+    attributes:
+      label: what trips you up?
+      description: optional · hidden combos, menus or modes you'd most like mapped out
+  - type: input
+    id: tagline
+    attributes:
+      label: tagline idea
+      description: optional · "travelers guide for ..."
